@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/src/site-image-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+#header nav ul {
+    padding: 0;
+}
+
+#header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#header nav ul li a {
+    color: white;
+}
+
+#header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#banner {
+    width: 100%;
+    height: 200px;
+    background-color: #1b2838;
+    text-align: center;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Главный контейнер */
+.container {
+    display: flex;
+}
+
+/* Блоки сайта */
+.news-column,
+.carousel-column,
+.games-list-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.carousel-column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Новости */
+.news-column {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.news-column h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.news-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.news-excerpt {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.news-date {
+    font-size: 14px;
+    color: white;
+}
+
+/* Карусель */
+#carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 600px;
+}
+
+#game-card {
+    width: 500px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #1b2838;
+    border-radius: 10px;
+    color: white;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    max-height: 100%;
+    animation: slideIn 0.5s ease;
+}
+
+.game-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.game-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.game-price {
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.arrow-button:hover {
+    opacity: 1;
+}
+
+/* Игры */
+.games-list-column {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.games-list-column h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.game-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: transform 0.3s ease;
+}
+
+.game-image img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.game-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.game-info {
+    flex: 1;
+    margin-right: 20px;
+    color: white;
+}
+
+.game-price {
+    width: 70px;
+    text-align: right;
+    color: Lime;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+#footer {
+    background-color: #1b2838;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_content a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Анимации */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
